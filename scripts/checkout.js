@@ -1,6 +1,7 @@
-import { cart, removeFromCart } from "../data/cart.js";
+import { cart } from "../data/cart.js";
 import { products } from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
+import { removeFromCart } from "../data/cart.js";
 
 let cartSummaryHTML = '';
 
@@ -35,7 +36,7 @@ cart.forEach((cartItem) => {
         </div>
         <div class="product-quantity">
             <span>
-            Quantity: <span class="quantity-label">${cart.quantity}</span>
+            Quantity: <span class="quantity-label">${cartItem.quantity}</span>
             </span>
             <span class="update-quantity-link link-primary">
             Update
